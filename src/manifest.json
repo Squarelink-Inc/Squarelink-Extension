@@ -1,0 +1,58 @@
+{
+  "name": "Squarelink",
+  "author": "Alex Patin",
+  "description": "Extension to swap MetaMask for Squarelink as your default Web3 provider",
+  "version": null,
+  "manifest_version": 2,
+  "icons": {
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  },
+  "browser_action": {
+    "default_title": "Squarelink",
+    "default_popup": "popup/popup.html"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "windows": "Alt+Shift+S",
+        "mac": "Alt+Shift+S",
+        "chromeos": "Alt+Shift+S",
+        "linux": "Alt+Shift+S"
+      }
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "file://*/*",
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "contentscript.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "permissions": [
+    "<all_urls>",
+    "*://*/*",
+    "activeTab",
+    "tabs",
+    "cookies",
+    "background",
+    "contextMenus",
+    "unlimitedStorage",
+    "storage",
+    "notifications"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
