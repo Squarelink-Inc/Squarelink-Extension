@@ -12,6 +12,9 @@
     "default_title": "Squarelink",
     "default_popup": "popup/popup.html"
   },
+  "web_accessible_resources": [
+    "scripts/squarelink.min.js"
+  ],
   "commands": {
     "_execute_browser_action": {
       "suggested_key": {
@@ -30,7 +33,7 @@
         "https://*/*"
       ],
       "js": [
-        "contentscript.js"
+        "scripts/contentscript.js"
       ],
       "run_at": "document_start",
       "all_frames": true

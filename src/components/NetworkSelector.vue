@@ -106,7 +106,7 @@ export default {
           this.$toasted.error('The Chain ID must be a number')
           return
         }
-        network = { url, chainId }
+        network = { url, chainId: parseInt(chainId) }
       }
       else network = { name }
       this.loading = true
@@ -224,7 +224,7 @@ export default {
   .dropdown
     cursor: default
     position: absolute
-    margin-top: 105px
+    margin-top: 86px
     width: 300px
     background: white
     background: #3c3f61

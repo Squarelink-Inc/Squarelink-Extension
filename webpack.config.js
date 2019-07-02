@@ -12,6 +12,7 @@ const config = {
   entry: {
     'background': './background.js',
     'popup/popup': './popup/popup.js',
+    'scripts/contentscript': './scripts/contentscript.js'
   },
   output: {
     path: __dirname + '/dist',
@@ -19,6 +20,9 @@ const config = {
   },
   resolve: {
     extensions: ['.js', '.vue'],
+  },
+  node: {
+     fs: "empty"
   },
   module: {
     rules: [
@@ -61,6 +65,7 @@ const config = {
       filename: '[name].css',
     }),
     new CopyWebpackPlugin([
+      { from: 'scripts/squarelink.min.js', to: 'scripts/squarelink.min.js' },
       { from: 'icons', to: 'icons', ignore: ['icon.xcf'] },
       { from: 'popup/popup.html', to: 'popup/popup.html', transform: transformHtml },
       {

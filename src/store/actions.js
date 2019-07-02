@@ -9,9 +9,7 @@ export const SET_NETWORK = ({ commit }, { network }) =>
     if (name) networkOpts = name
     else networkOpts = { url, chainId }
     try {
-      let provider = new Squarelink(config.SQLK_ID, name, {
-        scope: ['user:email'],
-      })
+      let provider = new Squarelink(config.SQLK_ID, networkOpts)
       if (!provider) return reject('Unable to connect to that network')
       commit(types.SET_NETWORK, { network })
       return resolve()

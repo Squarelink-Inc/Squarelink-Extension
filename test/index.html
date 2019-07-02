@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Squarelink Ext Test</title>
+  <link rel="stylesheet" href="https://use.typekit.net/dhc0ude.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	 crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.37/dist/web3.min.js"></script>
+</head>
+<body>
+  <script>
+    var web3 = new Web3(window.ethereum);
+    web3.eth.getAccounts(function(err, result) {
+      console.log(err, result)
+    })
+  </script>
+</body>
+</html>
