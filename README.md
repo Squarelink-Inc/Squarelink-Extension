@@ -49,7 +49,6 @@ It also enable [Hot Module Reloading](https://webpack.js.org/concepts/hot-module
 ### `npm run build-zip`
 
 Build a zip file for production. Zip file is located in `dist-zip` folder.
-```
 
 ## Documentation
 
