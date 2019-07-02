@@ -42,7 +42,6 @@
   "permissions": [
     "<all_urls>",
     "*://*/*",
-    "activeTab",
     "tabs",
     "cookies",
     "background",

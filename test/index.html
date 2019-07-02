@@ -11,8 +11,24 @@
 <body>
   <script>
     var web3 = new Web3(window.ethereum);
-    web3.eth.getAccounts(function(err, result) {
-      console.log(err, result)
+    var data = web3.eth.abi.encodeFunctionCall({
+      name: 'giveBirth',
+      type: 'function',
+      inputs: [{
+        name: '_matronId',
+        type: 'uint256'
+      }]
+    }, [ parseInt('18fb33', 16) ])
+    web3.eth.sendTransaction({
+      data: data,
+      to: '0x06012c8cf97bead5deae237070f9587f8e7a266d',
+      from: '0xc919ac3f8e6ff03349e472d501606fefee300028',
+      gas: 350000,
+      value: '0'
+    }).then(txId => {
+
+    }).catch(err => {
+      console.log(err)
     })
   </script>
 </body>

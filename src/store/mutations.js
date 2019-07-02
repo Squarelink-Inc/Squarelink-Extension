@@ -8,7 +8,7 @@ export default {
       url: '',
       ...network
     }
-    chrome.storage.sync.set({ ...newNetwork }, function() {
+    chrome.storage.sync.set({ network: newNetwork }, function() {
       console.log('Network Saved')
     })
     state.network = newNetwork

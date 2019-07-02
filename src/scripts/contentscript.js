@@ -4,7 +4,10 @@ import config from '@/config'
 const squarelinkMinScript = extension.extension.getURL('scripts/squarelink.min.js')
 
 if (shouldInjectWeb3()) {
-  chrome.storage.sync.get(['name', 'chainId', 'url'], function(network) {
+  chrome.storage.sync.get(['network'], function(items) {
+    var network = items.network
+    if (!network)
+      network = { name: 'mainnet' }
     injectScript(network)
   })
 }
