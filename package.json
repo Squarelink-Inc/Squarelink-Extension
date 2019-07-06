@@ -1,6 +1,6 @@
 {
   "name": "squarelink-extension",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Extension to swap MetaMask for Squarelink as your default Web3 provider",
   "author": "Alex Patin <alex@squarelink.com>",
   "license": "MIT",
