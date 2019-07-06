@@ -1,4 +1,3 @@
-import Squarelink from 'squarelink'
 import extension from 'extensionizer'
 import config from '@/config'
 const squarelinkMinScript = extension.extension.getURL('scripts/squarelink.min.js')
@@ -25,6 +24,7 @@ function injectScript (network) {
   try {
     var sqlk = new Squarelink("${config.SQLK_ID}", ${JSON.stringify(networkOpts)});
     window.ethereum = sqlk.getProvider();
+    window.ethereum.isMetaMask = function() { return true };
   } catch (e) {
     console.error('Squarelink script injection failed', e);
   }`
