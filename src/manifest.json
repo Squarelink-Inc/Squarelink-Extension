@@ -40,15 +40,11 @@
     }
   ],
   "permissions": [
-    "<all_urls>",
     "*://*/*",
-    "tabs",
-    "cookies",
     "background",
     "contextMenus",
     "unlimitedStorage",
-    "storage",
-    "notifications"
+    "storage"
   ],
   "background": {
     "scripts": [
