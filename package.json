@@ -5,6 +5,7 @@
   "author": "Alex Patin <alex@squarelink.com>",
   "license": "MIT",
   "scripts": {
+    "title": "tabset Mgmt || exit 0",
     "lint": "eslint --ext .js,.vue src",
     "prettier": "prettier \"src/**/*.{js,vue}\"",
     "prettier:write": "npm run prettier -- --write",
@@ -12,7 +13,7 @@
     "build:dev": "cross-env NODE_ENV=development webpack --hide-modules",
     "build-zip": "node scripts/build-zip.js",
     "watch": "npm run build -- --watch",
-    "watch:dev": "cross-env HMR=true npm run build:dev -- --watch"
+    "watch:dev": "npm run title && cross-env HMR=true npm run build:dev -- --watch"
   },
   "husky": {
     "hooks": {
