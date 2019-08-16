@@ -1,6 +1,8 @@
 export default {
-  mainnet: 'Ethereum Main Network',
-  ropsten: 'Ropsten Network',
-  kovan: 'Kovan Network',
-  rinkeby: 'Rinkeby Network',
+  mainnet: 'Ethereum Network',
+  xdai: 'xDai Network', 
+  ropsten: 'Ropsten Testnet',
+  kovan: 'Kovan Testnet',
+  rinkeby: 'Rinkeby Testnet',
+  goerli: 'Goerli Testnet'
 }
