@@ -22,9 +22,12 @@ function injectScript (network) {
   else networkOpts = { url, chainId }
   const inlineScript = `
   try {
-    var sqlk = new Squarelink("${config.SQLK_ID}", ${JSON.stringify(networkOpts)});
-    window.ethereum = sqlk.getProvider();
+    var sqlk = new Squarelink("${config.SQLK_ID}", ${JSON.stringify(networkOpts)}, {
+      useSync: true
+    });
+    window.ethereum = sqlk.getProviderSync();
     window.ethereum.isMetaMask = function() { return true };
+    console.log(window.ethereum)
   } catch (e) {
     console.error('Squarelink script injection failed', e);
   }`
